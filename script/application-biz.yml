@@ -1,0 +1,65 @@
+
+  rdscore: 
+    baseUrl: http://127.0.0.1:8088
+  operator: 
+    orders: 
+      - 
+        menuId: CPKmanu
+        label: 成品库库位管理
+        menuItemBackground: "#FFFF33"
+        menuItemTextColor: black
+        route: updateSite
+        disabled: false
+        canSendTask: true
+        tip: 库位设置
+        confirmMessage: 确定要执行吗？
+        params: 
+          - 
+            name: fromSiteId
+            input: select
+            label: 选择空托盘的库位
+            optionsSource: getToSite
+          - 
+            name: content
+            input: select
+            label: 库位内容
+            options: 
+              - 
+                value: null
+                label: 清空
+              - 
+                value: EmptyTray
+                label: 空托盘
+              - 
+                value: 满料架
+                label: 满料架
+      - 
+        menuId: TPair
+        label: 托盘缓存区库位管理
+        menuItemBackground: "#FFFF33"
+        menuItemTextColor: black
+        route: updateSite
+        disabled: false
+        canSendTask: true
+        tip: 库位设置
+        confirmMessage: 确定要执行吗？
+        params: 
+          - 
+            name: fromSiteId
+            input: select
+            label: 选择空托盘的库位
+            optionsSource: getToSite
+          - 
+            name: content
+            input: select
+            label: 库位内容
+            options: 
+              - 
+                value: null
+                label: 清空
+              - 
+                value: EmptyTray
+                label: 空托盘
+              - 
+                value: 满料架
+                label: 满料架
